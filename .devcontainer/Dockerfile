@@ -15,7 +15,7 @@ RUN \
 RUN \
     # common dev setup
     apt update && \
-    apt-get install sudo curl jq git bash-completion -y && \
+    apt-get install sudo curl jq git bash-completion build-essential graphviz graphviz-dev -y && \
     usermod -aG sudo vscode && \
     echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && \
     echo '. /etc/bash_completion' >> /home/vscode/.bashrc && \
